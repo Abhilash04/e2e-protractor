@@ -1,0 +1,78 @@
+{
+  "uid" : "3e6046430cf8bbd7",
+  "name" : "Verify Successful Login",
+  "fullName" : "Login MyStake Application.Verify Successful Login",
+  "historyId" : "9a1923fb68e496a3bc48428eff5a38d7",
+  "time" : {
+    "start" : 1561527252801,
+    "stop" : 1561527274740,
+    "duration" : 21939
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "47787f1e656111a0",
+      "name" : "Screenshot",
+      "source" : "47787f1e656111a0.png",
+      "type" : "image/png",
+      "size" : 17546
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login MyStake Application"
+  }, {
+    "name" : "testClass",
+    "value" : "Login MyStake Application"
+  }, {
+    "name" : "testMethod",
+    "value" : "Verify Successful Login"
+  }, {
+    "name" : "package",
+    "value" : "Login MyStake Application"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "b21f501ab43700bd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1561526994747,
+        "stop" : 1561527010557,
+        "duration" : 15810
+      }
+    }, {
+      "uid" : "1a06e9d9088d8540",
+      "status" : "failed",
+      "statusDetails" : "Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL.",
+      "time" : {
+        "start" : 1561522748075,
+        "stop" : 1561523148001,
+        "duration" : 399926
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3e6046430cf8bbd7.json",
+  "parameterValues" : [ ]
+}

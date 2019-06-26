@@ -1,0 +1,8 @@
+2019-06-26T04:04:22.138Z info: Entering text to the element and value is - abhilash.sharma+trading_hub@block8.io
+2019-06-26T04:04:22.406Z info: Entering text to the element and value is - password
+2019-06-26T04:04:22.647Z info: Clicking on the element - By(xpath, //button[contains(text(), 'SIGN IN')])
+2019-06-26T04:04:24.229Z info: User logged in successfully.
+2019-06-26T04:04:41.881Z info: Entering text to the element and value is - abhilash.sharma+trading@block8.io
+2019-06-26T04:04:42.081Z info: Entering text to the element and value is - password1
+2019-06-26T04:04:42.258Z info: Clicking on the element - By(xpath, //button[contains(text(), 'SIGN IN')])
+2019-06-26T04:05:12.284Z error: Error message is not getting displayed.

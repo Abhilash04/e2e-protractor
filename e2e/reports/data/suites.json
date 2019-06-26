@@ -1,0 +1,33 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Login MyStake Application",
+    "children" : [ {
+      "name" : "Verify Successful Login",
+      "uid" : "3e6046430cf8bbd7",
+      "parentUid" : "d76d74f41dcd323ebb2fb212809cd66a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1561527252801,
+        "stop" : 1561527274740,
+        "duration" : 21939
+      },
+      "flaky" : true,
+      "parameters" : [ ]
+    }, {
+      "name" : "Verify Invalid Credentials",
+      "uid" : "989e4cab5515a22f",
+      "parentUid" : "d76d74f41dcd323ebb2fb212809cd66a",
+      "status" : "failed",
+      "time" : {
+        "start" : 1561527274740,
+        "stop" : 1561527314333,
+        "duration" : 39593
+      },
+      "flaky" : true,
+      "parameters" : [ ]
+    } ],
+    "uid" : "d76d74f41dcd323ebb2fb212809cd66a"
+  } ]
+}

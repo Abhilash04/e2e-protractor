@@ -1,0 +1,36 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1561526994747' stop='1561527050024'>
+    <name>Login MyStake Application</name>
+    <title>Login MyStake Application</title>
+    <test-cases>
+        <test-case start='1561526994747' status='passed' stop='1561527010557'>
+            <name>Verify Successful Login</name>
+            <title>Verify Successful Login</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='dcf95d38-350c-43ef-9f39-6e99fb3e4dac-attachment.png' type='image/png' size='17504'/>
+            </attachments>
+        </test-case>
+        <test-case start='1561527010557' status='failed' stop='1561527050023'>
+            <name>Verify Invalid Credentials</name>
+            <title>Verify Invalid Credentials</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='dcb948fe-ef58-442c-83ec-b968e842201b-attachment.png' type='image/png' size='26648'/>
+            </attachments>
+            <failure>
+                <message>Expected false to be true.</message>
+                <stack-trace>Error: Failed expectation
+                    at UserContext.&lt;anonymous> (/Users/Progressio/Documents/Protractor/e2e/test_scripts/login.tests.ts:36:24)
+                    at step (/Users/Progressio/Documents/Protractor/outputjs/test_scripts/login.tests.js:32:23)
+                    at Object.next (/Users/Progressio/Documents/Protractor/outputjs/test_scripts/login.tests.js:13:53)
+                    at fulfilled (/Users/Progressio/Documents/Protractor/outputjs/test_scripts/login.tests.js:4:58)
+                    at process._tickCallback (internal/process/next_tick.js:68:7)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

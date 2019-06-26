@@ -1,0 +1,27 @@
+{
+  "name": "e2e",
+  "version": "1.0.0",
+  "description": "MyStake E2E Test Suite",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "pretest": "npm run tsc",
+    "test": "protractor outputjs/config_files/conf.js || :",
+    "posttest": "allure generate ./e2e/results --clean -o ./e2e/reports || true"
+  },
+  "author": "abhilash",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jasmine": "^3.3.12",
+    "@types/node": "^12.0.2",
+    "allure-commandline": "^2.9.0",
+    "jasmine-allure-reporter": "^1.0.2",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "jasmine": "^3.4.0",
+    "log4js": "^4.3.1",
+    "protractor": "^5.4.2",
+    "typescript": "^3.4.5"
+  }
+}

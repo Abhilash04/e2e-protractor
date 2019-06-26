@@ -1,0 +1,63 @@
+{
+  "uid" : "d170bfb1175c003b",
+  "name" : "Verify Invalid Credentials",
+  "fullName" : "Login MyStake Application.Verify Invalid Credentials",
+  "historyId" : "1a61c8fdaf49fb016e7a552842d039a8",
+  "time" : {
+    "start" : 1561527010557,
+    "stop" : 1561527050023,
+    "duration" : 39466
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Expected false to be true.",
+  "statusTrace" : "Error: Failed expectation\n                    at UserContext.<anonymous> (/Users/Progressio/Documents/Protractor/e2e/test_scripts/login.tests.ts:36:24)\n                    at step (/Users/Progressio/Documents/Protractor/outputjs/test_scripts/login.tests.js:32:23)\n                    at Object.next (/Users/Progressio/Documents/Protractor/outputjs/test_scripts/login.tests.js:13:53)\n                    at fulfilled (/Users/Progressio/Documents/Protractor/outputjs/test_scripts/login.tests.js:4:58)\n                    at process._tickCallback (internal/process/next_tick.js:68:7)",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "Expected false to be true.",
+    "statusTrace" : "Error: Failed expectation\n                    at UserContext.<anonymous> (/Users/Progressio/Documents/Protractor/e2e/test_scripts/login.tests.ts:36:24)\n                    at step (/Users/Progressio/Documents/Protractor/outputjs/test_scripts/login.tests.js:32:23)\n                    at Object.next (/Users/Progressio/Documents/Protractor/outputjs/test_scripts/login.tests.js:13:53)\n                    at fulfilled (/Users/Progressio/Documents/Protractor/outputjs/test_scripts/login.tests.js:4:58)\n                    at process._tickCallback (internal/process/next_tick.js:68:7)",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "4afded710e99be54",
+      "name" : "Screenshot",
+      "source" : "4afded710e99be54.png",
+      "type" : "image/png",
+      "size" : 26648
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login MyStake Application"
+  }, {
+    "name" : "testClass",
+    "value" : "Login MyStake Application"
+  }, {
+    "name" : "testMethod",
+    "value" : "Verify Invalid Credentials"
+  }, {
+    "name" : "package",
+    "value" : "Login MyStake Application"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d170bfb1175c003b.json",
+  "parameterValues" : [ ]
+}

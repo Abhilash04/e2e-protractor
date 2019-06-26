@@ -1,0 +1,21 @@
+[ {
+  "uid" : "989e4cab5515a22f",
+  "name" : "Verify Invalid Credentials",
+  "time" : {
+    "start" : 1561527274740,
+    "stop" : 1561527314333,
+    "duration" : 39593
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "3e6046430cf8bbd7",
+  "name" : "Verify Successful Login",
+  "time" : {
+    "start" : 1561527252801,
+    "stop" : 1561527274740,
+    "duration" : 21939
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

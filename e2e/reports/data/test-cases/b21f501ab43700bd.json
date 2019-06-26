@@ -1,0 +1,59 @@
+{
+  "uid" : "b21f501ab43700bd",
+  "name" : "Verify Successful Login",
+  "fullName" : "Login MyStake Application.Verify Successful Login",
+  "historyId" : "9a1923fb68e496a3bc48428eff5a38d7",
+  "time" : {
+    "start" : 1561526994747,
+    "stop" : 1561527010557,
+    "duration" : 15810
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "99812f9d8b82e49b",
+      "name" : "Screenshot",
+      "source" : "99812f9d8b82e49b.png",
+      "type" : "image/png",
+      "size" : 17504
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login MyStake Application"
+  }, {
+    "name" : "testClass",
+    "value" : "Login MyStake Application"
+  }, {
+    "name" : "testMethod",
+    "value" : "Verify Successful Login"
+  }, {
+    "name" : "package",
+    "value" : "Login MyStake Application"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b21f501ab43700bd.json",
+  "parameterValues" : [ ]
+}
