@@ -4,9 +4,7 @@ services:
   - docker:dind
 
 before_script:
-  - apt-get -y install build-essential
-  - sudo apt-get install gcc
-  - apk add --no-cache py-pip
+  - apk add python python-dev py-pip build-base
   - pip install docker-compose
   - docker-compose build
   - docker-compose up -d
