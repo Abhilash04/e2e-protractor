@@ -5,7 +5,8 @@ services:
 
 before_script:
   - apk add python python-dev py-pip build-base
-  - pip install docker-compose
+  - pip install --quiet docker-compose~=1.23.0
+  # - pip install docker-compose (gcc error with latest version)
   - docker-compose build
   - docker-compose up -d
   - npm install
