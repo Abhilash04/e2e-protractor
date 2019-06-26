@@ -7,7 +7,7 @@ before_script:
   - apk add python python-dev py-pip build-base
   - pip install --quiet docker-compose~=1.23.0
   # - pip install docker-compose (gcc error with latest version)
-  - docker-compose build
+  # - docker-compose build
   - docker-compose up -d
   - npm install
   # here we can install our dependencies (composer, yarn…)
