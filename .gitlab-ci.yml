@@ -9,9 +9,25 @@ before_script:
   # - pip install docker-compose (gcc error with latest version)
   # - docker-compose build
   - docker-compose up -d
-  - npm install
-  # here we can install our dependencies (composer, yarn…)
 
-tests:
-  script:
-    - npm test
+image: node:latest
+
+    stages:
+      - build
+      - test
+
+    cache:
+      paths:
+        - node_modules/
+
+    install_dependencies:
+      stage: build
+      script:
+        - npm install
+      artifacts:
+        paths:
+          - node_modules/
+
+    testing_testing:
+      stage: test
+      script: npm test
