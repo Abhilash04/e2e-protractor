@@ -6,6 +6,6 @@ build
 *.tgz
 npm-debug.log*
 .npm/
-**/outputjs
-**/results
+outputjs/*
+results/*
 package-lock.json
