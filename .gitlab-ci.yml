@@ -1,3 +1,13 @@
+image: node
+
+cache:
+  paths:
+    - node_modules/
+
+before_script:  
+  - apt-get update -qq && apt-get install
+  - npm install
+
 image: docker
 
 services:
@@ -10,24 +20,6 @@ before_script:
   # - docker-compose build
   - docker-compose up -d
 
-image: node:latest
-
-    stages:
-      - build
-      - test
-
-    cache:
-      paths:
-        - node_modules/
-
-    install_dependencies:
-      stage: build
-      script:
-        - npm install
-      artifacts:
-        paths:
-          - node_modules/
-
-    testing_testing:
-      stage: test
-      script: npm test
+tests:
+  script:
+    - npm test
