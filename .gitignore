@@ -8,4 +8,5 @@ npm-debug.log*
 .npm/
 outputjs/*
 results/*
+logs/*
 package-lock.json

@@ -9,7 +9,8 @@ export let config: Config = {
     defaultTimeoutInterval: 120000
   },
 
-  seleniumAddress: "http://localhost:4444/wd/hub",
+  // seleniumAddress: "http://localhost:4444/wd/hub",
+  seleniumAddress: "http://34.93.73.109:4444/wd/hub",
 
   capabilities: {
     browserName: "chrome",

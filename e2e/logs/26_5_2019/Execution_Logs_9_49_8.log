@@ -1,8 +1,0 @@
-2019-06-26T04:25:08.408Z error: Exception occured while entering text to the element - No element found using locator: By(css selector, *[id="email"])
-2019-06-26T04:25:17.462Z info: Entering text to the element and value is - password
-2019-06-26T04:25:17.658Z info: Clicking on the element - By(xpath, //button[contains(text(), 'SIGN IN')])
-2019-06-26T04:25:47.666Z error: User is unable to login.
-2019-06-26T04:25:59.608Z info: Entering text to the element and value is - abhilash.sharma+trading@block8.io
-2019-06-26T04:25:59.795Z info: Entering text to the element and value is - password1
-2019-06-26T04:25:59.981Z info: Clicking on the element - By(xpath, //button[contains(text(), 'SIGN IN')])
-2019-06-26T04:26:29.994Z error: Error message is not getting displayed.
