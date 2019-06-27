@@ -1,4 +1,8 @@
+outputjs/
 **/node_modules
+e2e/results/
+e2e/logs/
+e2e/reports/
 .idea/
 .vscode/
 build
@@ -6,7 +10,3 @@ build
 *.tgz
 npm-debug.log*
 .npm/
-outputjs/*
-results/*
-logs/*
-package-lock.json

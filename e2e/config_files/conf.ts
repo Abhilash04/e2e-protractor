@@ -12,21 +12,32 @@ export let config: Config = {
   // seleniumAddress: "http://localhost:4444/wd/hub",
   seleniumAddress: "http://34.93.73.109:4444/wd/hub",
 
-  capabilities: {
-    browserName: "chrome",
-    chromeOptions: {
-      args: ['--start-maximized', 'disable-infobars']
-    }
-  },
-
   // capabilities: {
-  //   "os": "OS X",
-  //   "os_version": "Mojave",
-  //   "browserName": "Safari",
-  //   "browser_version": "12.0",
-  //   "resolution": "1024x768"
+  //   browserName: "chrome",
+  //   chromeOptions: {
+  //     args: ['--start-maximized', 'disable-infobars']
+  //   }
   // },
 
+  // Parallel Testing in Different Browsers
+  multiCapabilities: [
+    {
+      browserName: "chrome",
+      chromeOptions: {
+        args: ['--start-maximized', 'disable-infobars']
+      }
+    },
+    {
+      browserName: "firefox"
+    },
+    {
+      browserName: "Safari",
+      os: "OS X",
+      os_version: "Mojave",
+      browser_version: "12.0",
+      resolution: "1024x768"
+    }
+  ],
   specs: ["../test_scripts/*.tests.js"],
 
   onPrepare: () => {
