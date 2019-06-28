@@ -10,6 +10,13 @@ before_script:
   # - docker-compose build
   - docker-compose up -d
 
+image: java:8
+
+before_script:
+  - sudo apt-add-repository ppa:qameta/allure
+  - sudo apt-get update
+  - sudo apt-get install allure
+
 image: node:latest
 
 before_script:
