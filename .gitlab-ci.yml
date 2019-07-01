@@ -6,16 +6,7 @@ services:
 before_script:
   - apk add python python-dev py-pip build-base
   - pip install --quiet docker-compose~=1.23.0
-  # - pip install docker-compose (gcc error with latest version)
-  # - docker-compose build
   - docker-compose up -d
-
-image: java:8
-
-before_script:
-  - sudo apt-add-repository ppa:qameta/allure
-  - sudo apt-get update
-  - sudo apt-get install allure
 
 image: node:latest
 
@@ -29,3 +20,9 @@ cache:
 tests:
   script:
     - npm test
+
+artifacts:
+    name: "myStake-$CI_COMMIT_TAG"
+    paths:
+      - artifacts/e2e/reports
+    expire_in: 30 days
