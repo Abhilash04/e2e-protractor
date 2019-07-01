@@ -11,8 +11,7 @@ before_script:
 
 image: java:8-jdk
 
-build:
-     script:
+before_script:
       - export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/bin/java"
 
 image: node:latest
