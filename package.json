@@ -7,7 +7,7 @@
     "tsc": "tsc",
     "pretest": "npm run tsc",
     "test": "protractor outputjs/config_files/conf.js || :",
-    "posttest": "npm allure generate ./e2e/results --clean -o ./e2e/reports || true"
+    "posttest": "allure generate ./e2e/results --clean -o ./e2e/reports || true"
   },
   "author": "abhilash",
   "license": "ISC",
