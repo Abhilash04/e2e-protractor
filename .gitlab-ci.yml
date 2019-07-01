@@ -1,27 +1,24 @@
 image: picoded/ubuntu-openjdk-8-jdk
 
-variables:
-  JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64/
-
 before_script:
-  - export JAVA_HOME
+  - export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
   - echo $JAVA_HOME
 
-image: node:latest
+# image: node:latest
 
-before_script:
-  - npm install
+# before_script:
+#   - npm install
 
-cache:
-  paths:
-    - node_modules/
+# cache:
+#   paths:
+#     - node_modules/
 
-tests:
-  script:
-    - npm test
+# tests:
+#   script:
+#     - npm test
 
-  artifacts:
-      name: "myStake-$CI_COMMIT_TAG"
-      paths:
-        - artifacts/e2e/reports
-      expire_in: 5 days
+#   artifacts:
+#       name: "myStake-$CI_COMMIT_TAG"
+#       paths:
+#         - artifacts/e2e/reports
+#       expire_in: 5 days
