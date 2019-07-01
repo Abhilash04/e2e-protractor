@@ -9,10 +9,11 @@ before_script:
   - docker-compose up -d
 
 
-image: java:latest
+image: java:8-jdk
 
-before_script:
-  - export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/bin/java
+build:
+     script:
+      - export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/bin/java"
 
 image: node:latest
 
