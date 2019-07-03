@@ -15,9 +15,9 @@
  build:
    stage: build
    script:
-    - docker build -t "java:dockerfile" .
+    - docker pull openjdk
     - docker run java:dockerfile
-    
+
 image: node:latest
 
 before_script:
