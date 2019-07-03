@@ -6,8 +6,6 @@ services:
 before_script:
   - apk add python python-dev py-pip build-base
   - pip install --quiet docker-compose~=1.23.0
-
-build:
   - docker build -t "java:dockerfile" .
   - docker run java:dockerfile
 
