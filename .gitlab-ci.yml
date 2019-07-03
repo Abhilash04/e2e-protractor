@@ -1,14 +1,23 @@
-image: docker
+ image: docker:stable
 
-services:
+ variables:
+   DOCKER_HOST: tcp://docker:2375/
+   DOCKER_DRIVER: overlay2
+
+ services:
   - docker:dind
 
-before_script:
+ before_script:
   - apk add python python-dev py-pip build-base
   - pip install --quiet docker-compose~=1.23.0
-  - docker build -t "java:dockerfile" .
-  - docker run java:dockerfile
+  - docker info
 
+ build:
+   stage: build
+   script:
+    - docker build -t "java:dockerfile" .
+    - docker run java:dockerfile
+    
 image: node:latest
 
 before_script:
