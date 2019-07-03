@@ -8,8 +8,8 @@ services:
   - docker:dind
 
 before_script:
-# - apk add python python-dev py-pip build-base
-# - pip install --quiet docker-compose~=1.23.0
+  - apk add python python-dev py-pip build-base
+  - pip install --quiet docker-compose~=1.23.0
   - docker info
 
 build:
