@@ -6,7 +6,10 @@ services:
 before_script:
   - apk add python python-dev py-pip build-base
   - pip install --quiet docker-compose~=1.23.0
-  - docker run -it --rm dockerfile/java:oracle-java8
+
+build:
+  - docker build -t "java:dockerfile" .
+  - docker run java:dockerfile
 
 image: node:latest
 
