@@ -1,21 +1,16 @@
- image: docker:stable
+image: docker:stable
 
- variables:
-   DOCKER_HOST: tcp://docker:2375/
-   DOCKER_DRIVER: overlay2
+variables:
+  DOCKER_HOST: tcp://docker:2375/
+  DOCKER_DRIVER: overlay2
 
- services:
+services:
   - docker:dind
 
- before_script:
-  # - apk add python python-dev py-pip build-base
-  # - pip install --quiet docker-compose~=1.23.0
+before_script:
+# - apk add python python-dev py-pip build-base
+# - pip install --quiet docker-compose~=1.23.0
   - docker info
-
- build:
-   stage: build
-   script:
-    - docker pull openjdk
 
 image: node:latest
 
@@ -26,7 +21,13 @@ cache:
   paths:
     - node_modules/
 
+build:
+  stage: build
+  script:
+    - docker pull openjdk
+
 tests:
+  stage: test
   script:
     - npm test
 
