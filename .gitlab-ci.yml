@@ -11,6 +11,7 @@ before_script:
 # - apk add python python-dev py-pip build-base
 # - pip install --quiet docker-compose~=1.23.0
   - docker info
+  - docker pull openjdk
 
 image: node:latest
 
@@ -20,11 +21,6 @@ before_script:
 cache:
   paths:
     - node_modules/
-
-build:
-  stage: build
-  script:
-    - docker pull openjdk
 
 tests:
   stage: test
