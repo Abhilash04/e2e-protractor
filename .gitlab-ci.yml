@@ -11,7 +11,12 @@ before_script:
 # - apk add python python-dev py-pip build-base
 # - pip install --quiet docker-compose~=1.23.0
   - docker info
-  - docker pull openjdk
+
+build:
+  stage: build
+  script:
+    - docker pull openjdk
+    - export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
 
 image: node:latest
 
