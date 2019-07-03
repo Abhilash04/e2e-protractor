@@ -1,24 +1,22 @@
-image: picoded/ubuntu-openjdk-8-jdk
-
+image: docker
+services:
+  - docker:dind
 before_script:
-  - export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
-  - echo $JAVA_HOME
+  - apk add python python-dev py-pip build-base
+  - pip install --quiet docker-compose~=1.23.0
+  - docker run -it --rm dockerfile/java:oracle-java8
 
-# image: node:latest
-
-# before_script:
-#   - npm install
-
-# cache:
-#   paths:
-#     - node_modules/
-
-# tests:
-#   script:
-#     - npm test
-
-#   artifacts:
-#       name: "myStake-$CI_COMMIT_TAG"
-#       paths:
-#         - artifacts/e2e/reports
-#       expire_in: 5 days
+image: node:latest
+before_script:
+  - npm install
+cache:
+  paths:
+    - node_modules/
+tests:
+  script:
+    - npm test
+  artifacts:
+      name: "myStake-$CI_COMMIT_TAG"
+      paths:
+        - artifacts/e2e/reports
+      expire_in: 30 days
