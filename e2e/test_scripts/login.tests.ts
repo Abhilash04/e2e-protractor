@@ -37,7 +37,6 @@ describe("Login MyStake Application", function () {
     });
 
     afterEach(async function () {
-        // browser.restart();
         browser.executeScript('window.sessionStorage.clear();');
         browser.executeScript('window.localStorage.clear();');
     });
