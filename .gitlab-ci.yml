@@ -1,25 +1,33 @@
-build:
-  image: gitlab/dind
-  services:
-    - docker:dind
-  stage: build
+stages:
+  - build
+  - test
+
+variables:
+  npm_config_cache: "$CI_PROJECT_DIR/.npm"
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - .npm
+    - node_modules
+
+install:
+  image: node:latest
+  stage: build 
   script:
+    - npm ci
     - docker pull openjdk
     - export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
 
-tests:
+e2e:
   image: node:latest
-  # image: java:8u102-jdk
   stage: test
   script:
-    - npm install
     - npm test
-
-  cache:
-    paths:
-      - node_modules/
   artifacts:
-      name: "myStake-$CI_COMMIT_TAG"
-      paths:
-        - artifacts/e2e/reports
-      expire_in: 30 days
+    name: "myStake-$CI_COMMIT_TAG"
+    expire_in: 1 week
+    when: always
+    paths:
+      - artifacts/e2e/reports
+      
