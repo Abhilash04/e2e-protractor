@@ -4,7 +4,6 @@ stages:
 
 variables:
   npm_config_cache: "$CI_PROJECT_DIR/.npm"
-  # JAVA_HOME: "/usr/lib/jvm/java-8-openjdk-amd64/"
 
 cache:
   key: ${CI_COMMIT_REF_SLUG}
@@ -17,8 +16,13 @@ install:
   stage: build 
   script:
     - npm ci
-    # - docker pull openjdk
-    # - export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
+
+java:
+  image: gitlab/dnd
+  stage: build 
+  script:
+    - docker pull openjdk
+    - export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
 
 e2e:
   image: node:latest
