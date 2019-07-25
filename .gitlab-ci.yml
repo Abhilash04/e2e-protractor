@@ -1,5 +1,6 @@
 stages:
-  - build
+  - install_java
+  - install_node
   - test
 
 variables:
@@ -11,15 +12,15 @@ cache:
     - .npm
     - node_modules
 
-install:
+install_node:
   image: node:latest
-  stage: build 
+  stage: install_node 
   script:
     - npm ci
 
-java:
-  image: gitlab/dnd
-  stage: build 
+install_java:
+  image: gitlab/dind
+  stage: install_java 
   script:
     - docker pull openjdk
     - export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
