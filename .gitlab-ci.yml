@@ -9,7 +9,7 @@ build:
 
 tests:
   image: node:latest
-  image: java:8u102-jdk
+  # image: java:8u102-jdk
   stage: test
   script:
     - npm install
