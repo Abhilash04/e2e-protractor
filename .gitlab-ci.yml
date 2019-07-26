@@ -1,10 +1,10 @@
 stages:
-  - install_java
-  - install_node
+  - build
   - test
 
 variables:
   npm_config_cache: "$CI_PROJECT_DIR/.npm"
+  # JAVA_HOME: "/usr/lib/jvm/java-8-openjdk-amd64/"
 
 cache:
   key: ${CI_COMMIT_REF_SLUG}
@@ -12,15 +12,9 @@ cache:
     - .npm
     - node_modules
 
-install_node:
-  image: node:latest
-  stage: install_node 
-  script:
-    - npm ci
-
-install_java:
+java:
   image: gitlab/dind
-  stage: install_java 
+  stage: build 
   script:
     - docker pull openjdk
     - export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
@@ -29,6 +23,7 @@ e2e:
   image: node:latest
   stage: test
   script:
+    - npm ci
     - npm test
   artifacts:
     name: "myStake-$CI_COMMIT_TAG"
