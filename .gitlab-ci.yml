@@ -29,7 +29,7 @@ reports:
   stage: reports 
   script:
     - docker build -t elixirautomation/allure .
-    - docker run -v $(pwd)/allure-report:/allure-report -v $(pwd)/allure-results:/allure-results elixirautomation/allure allure generate ./artifacts/e2e/allure-results --clean -o ./e2e/allure-report
+    - docker run -v $(pwd)/allure-report:/allure-report -v $(pwd)/allure-results:/allure-results elixirautomation/allure allure generate ./e2e/allure-results --clean -o ./e2e/allure-report
   
   artifacts:
     name: "myStake-$CI_COMMIT_TAG"
