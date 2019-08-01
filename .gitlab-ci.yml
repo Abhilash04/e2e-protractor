@@ -22,7 +22,7 @@ e2e:
     expire_in: 1 week
     when: always
     paths:
-      - artifacts/e2e/allure-results
+      - ./e2e/allure-results
 
 reports:
   image: gitlab/dind
@@ -36,4 +36,4 @@ reports:
     expire_in: 1 week
     when: always
     paths:
-      - artifacts/e2e/allure-report
+      - ./e2e/allure-report
