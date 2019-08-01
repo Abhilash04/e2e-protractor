@@ -27,6 +27,8 @@ e2e:
 reports:
   image: gitlab/dind
   stage: reports 
+  dependencies:
+    - e2e
   script:
     - docker build -t elixirautomation/allure .
     - docker run -v $(pwd)/allure-report:/allure-report -v $(pwd)/allure-results:/allure-results elixirautomation/allure allure generate ./e2e/allure-results --clean -o ./e2e/allure-report
