@@ -1,28 +1,21 @@
-#
-# Oracle Java 8 Dockerfile
-#
-# https://github.com/dockerfile/java
-# https://github.com/dockerfile/java/tree/master/oracle-java8
-#
+FROM anapsix/alpine-java
+MAINTAINER Abhilash Sharma
 
-# Pull base image.
-FROM ubuntu
+RUN mkdir /allure
+RUN mkdir /allure-results
+RUN mkdir /allure-report
+RUN mkdir /allure-config
 
-# Install Java.
-RUN \
-    echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
-    add-apt-repository -y ppa:webupd8team/java && \
-    apt-get update && \
-    apt-get install -y oracle-java8-installer && \
-    rm -rf /var/lib/apt/lists/* && \
-    rm -rf /var/cache/oracle-jdk8-installer
+RUN apk update && \
+    apk add ca-certificates && \
+    update-ca-certificates && \
+    apk add openssl && \
+    apk add unzip
 
-
-# Define working directory.
-WORKDIR /data
-
-# Define commonly used JAVA_HOME variable
-ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
-
-# Define default command.
-CMD ["bash"]
+RUN wget https://dl.bintray.com/qameta/generic/io/qameta/allure/allure/2.0.0/allure-2.0.0.tgz
+RUN tar -zxvf allure-2.0.0.tgz
+RUN cp -r /allure-2.0.0/* /allure
+RUN rm -rf allure-2.0.0
+RUN rm allure-2.0.0.tgz 
+ENV PATH="/allure/bin:${PATH}"
+ENV ALLURE_CONFIG="/allure-config/allure.properties"

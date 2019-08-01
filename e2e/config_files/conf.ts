@@ -49,7 +49,7 @@ export let config: Config = {
 
     var AllureReporter = require("jasmine-allure-reporter");
     var reporter = new AllureReporter({
-      resultsDir: './e2e/results'
+      resultsDir: './e2e/allure-results'
     });
     jasmine.getEnv().addReporter(reporter);
     jasmine.getEnv().afterEach(function (done) {

@@ -6,8 +6,7 @@
   "scripts": {
     "tsc": "tsc",
     "pretest": "npm run tsc",
-    "test": "protractor outputjs/config_files/conf.js || :",
-    "posttest": "allure generate ./e2e/results --clean -o ./e2e/reports || true"
+    "test": "protractor outputjs/config_files/conf.js || :"
   },
   "author": "abhilash",
   "license": "ISC",

@@ -1,33 +1,35 @@
 stages:
-  - build
   - test
+  - reports
 
 variables:
   npm_config_cache: "$CI_PROJECT_DIR/.npm"
-  # JAVA_HOME: "/usr/lib/jvm/java-8-openjdk-amd64/"
 
 cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
     - .npm
     - node_modules
-
-java:
-  image: gitlab/dind
-  stage: build 
-  script:
-    - docker pull openjdk
-    - export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
-
 e2e:
   image: node:latest
   stage: test
   script:
     - npm ci
     - npm test
+
+reports:
+  image: gitlab/dind
+  stage: reports 
+  script:
+    - docker build -t elixirautomation/allure .
+    - docker run \
+      -v $(pwd)/allure-report:/allure-report \
+      -v $(pwd)/allure-results:/allure-results \
+      elixirautomation/allure allure generate ./e2e/allure-results --clean -o ./e2e/allure-report
+  
   artifacts:
     name: "myStake-$CI_COMMIT_TAG"
     expire_in: 1 week
     when: always
     paths:
-      - artifacts/e2e/reports
+      - artifacts/e2e/allure-report

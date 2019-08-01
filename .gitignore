@@ -1,8 +1,8 @@
 outputjs/
 **/node_modules
-e2e/results/
+e2e/allure-results/
 e2e/logs/
-e2e/reports/
+e2e/allure-report/
 .idea/
 .vscode/
 build
