@@ -22,6 +22,7 @@ e2e:
     expire_in: 1 week
     when: always
     paths:
+      - ./e2e/logs
       - ./e2e/allure-results
 
 reports:
@@ -30,8 +31,9 @@ reports:
   dependencies:
     - e2e
   script:
-    - docker build -t elixirautomation/allure .
-    - docker run -v $(pwd)/allure-report:/allure-report -v $(pwd)/allure-results:/allure-results elixirautomation/allure allure generate ./e2e/allure-results --clean -o ./e2e/allure-report
+    - cd e2e
+    - docker pull 20611617/docker-allure
+    - docker run -v $(pwd)/allure-report:/allure-report -v $(pwd)/allure-results:/allure-results 20611617/docker-allure allure generate /allure-results --clean -o /allure-report
   
   artifacts:
     name: "myStake-$CI_COMMIT_TAG"
